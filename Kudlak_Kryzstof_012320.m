@@ -83,3 +83,11 @@ fprintf('The element in row 3 and column 4 of vector h is %i.\n', h(3,4));
  "The element in row 3 and columns 4 and 3 of vector h are XX and YY."
 %}
 fprintf('The element in row 3 and columns 4 and 3 of vector h are %i and %i.\n', h(3,4), h(3,3));
+
+% Built in functions
+j = [2:2:4,6,sind(10),sqrt(5)]
+% average
+mean = mean(j)
+std  = std(j)
+max  = max(j)
+min  = min(j)
