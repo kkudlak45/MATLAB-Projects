@@ -6,6 +6,8 @@ clc; clear; close all;
 
 %%
 
+% Problem 1
+
 B = [18:-1:13; 12:-1:7; 6:-1:1];
 va = [B(:,2); B(:,5)];
 vb = [B(3,3:6)'; B(:,2)];
@@ -13,7 +15,9 @@ vc = [B(:,2);B(:,4);B(:,6)];
 
 %%
 
-g = 8.81; % m/s^2
+% Problem 2
+
+g = 9.81; % m/s^2
 theta = 75; % degrees
 v0 = 110; % m/s
 
@@ -29,6 +33,8 @@ xhm = (-b - sqrt(b^2 + 4*a*hm))/(2*a)
 
 %%
 
+% Problem 3
+
 u = 0:0.05:1;
 k = 0.25;
 p = (k*u.*(1-u))./(k+u);
@@ -42,6 +48,8 @@ E = abs((pmax01 - pmax05)/pmax05) * 100
 
 %%
 
+% Problem 4
+
 figure(1);
 fplot(@(x) 4/sqrt(x), [2 60]);
 hold on;
@@ -50,6 +58,8 @@ xlabel('PG (mm Hg)'); ylabel('Av (cm^2)'); title('Av vs PG');
 legend('Q = 4', 'Q = 5');
 
 %%
+
+% Problem 5
 
 figure(2);
 
@@ -62,7 +72,7 @@ fplot(@(x) 0.41*4*x.^3 - 10.8*3*x.^2 + 128*x - 8.2, [0 8]);
 ylabel('Velocity (m/s)');
 
 subplot(3,1,3);
-fplot(@(x) 0.41*12*x.^2 - 10.8*6*x + 128);
+fplot(@(x) 0.41*12*x.^2 - 10.8*6*x + 128, [0, 8]);
 ylabel('Acceleration (m/s^2)');
 xlabel('Time (s)');
 
